@@ -178,7 +178,7 @@ start() {
         ln -s -f "$service" "${SERVICES_DIR}/"
     done
 
-    exec /etc/runit/2 </dev/null >/dev/null 2>/dev/null
+    exec env runitdir=svmanaged /etc/runit/2 </dev/null >/dev/null 2>/dev/null
 }
 
 shell() {
